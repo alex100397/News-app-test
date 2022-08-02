@@ -1,0 +1,12 @@
+.weather-app{
+    width:100%;
+    height:20vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.weather-container{
+    padding: 20px;
+    box-shadow: 0 0 5px black;
+}
