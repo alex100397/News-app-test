@@ -30,7 +30,7 @@ const Weather = () => {
       };
     
       useEffect(() => {
-        weatherApi()
+        weatherApi() // eslint-disable-next-line
         },[latitude,longitude])  
 
   return (
