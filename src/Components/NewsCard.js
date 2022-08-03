@@ -1,5 +1,7 @@
+import { Button } from '@mui/material';
 import React from 'react';
-import './NewsCard.css'
+import './NewsCard.css';
+
 
 const NewsCard = ({newsItem}) => {
   return (
@@ -9,8 +11,10 @@ const NewsCard = ({newsItem}) => {
         <div className='news-text'>
             <span className="title"><b>{newsItem.title}</b></span>
             <span className="publisher">Published by - {newsItem.author}</span>
-            <a className='read-more' href={newsItem.url}>Read More</a>
-
+            <div class="center"><Button variant="contained">
+              <a className='read-more' href={newsItem.url}>Read More</a>
+            </Button>
+            </div>
         </div>
         
     </div>

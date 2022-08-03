@@ -34,12 +34,12 @@ const Weather = () => {
         weatherApi() // eslint-disable-next-line
         },[latitude,longitude])  
 
-       const wIcon = `http://openweathermap.org/img/wn/${icon}.png` 
+       const wIcon = `http://openweathermap.org/img/wn/${icon}.png`; 
 
   return (
     <div className='weather-app'>
         <div className='weather-container'>
-           <img src={wIcon} alt="no-image"/>
+           <img src={wIcon} alt="icon"/>
            <h4>{cityName}</h4>
            <h4>{weather}</h4>
            <h4>{temperature}°C</h4>        
