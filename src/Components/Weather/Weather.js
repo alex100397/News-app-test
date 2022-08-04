@@ -11,14 +11,14 @@ const Weather = () => {
     const [cityName,setCityName] = useState('');
     const [icon,setIcon] = useState('');
     
-    const savePosition = ((position) => {
+    const savePosition = ((position) => {  //Setting the Longitude and Latitude
         setLatitude(position.coords.latitude);
         setLongitude(position.coords.longitude);     
       }); 
 
       const weatherApi = async () => {
         try{
-          await window.navigator.geolocation.getCurrentPosition(savePosition);  
+          await window.navigator.geolocation.getCurrentPosition(savePosition);  //This will help to geolocate your location
           const weather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=cfac9f68c28bef7c10615e818424ae20&units=metric`);
           setCityName(weather.data.name);
           setWeather(weather.data.weather[0].main);          
@@ -42,8 +42,7 @@ const Weather = () => {
            <img src={wIcon} alt="icon"/>
            <h4>{cityName}</h4>
            <h4>{weather}</h4>
-           <h4>{temperature}°C</h4>        
-            
+           <h4>{temperature}°C</h4>                
         </div>
     </div>
   )
