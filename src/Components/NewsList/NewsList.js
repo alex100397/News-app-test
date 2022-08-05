@@ -23,12 +23,12 @@ const NewsList = ({newsList}) => { //Destructuring props
 
   return (
     <Container maxWidth="md">
-      <div className='news-list'>
         <div className='search'>
           <Box sx = {{width:500,maxWidth:'100%', }} >
             <TextField fullWidth label="Search" onChange={(e)=> searchItems(e.target.value)}/>
           </Box> 
         </div>
+        <div className='news-list'>
           {search.length > 1 ? (
             filter.map((newsItem)=> ( 
               <NewsCard newsItem={newsItem} key={newsItem.title}/> //Passing values to NewsCard component
