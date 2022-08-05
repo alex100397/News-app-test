@@ -5,7 +5,7 @@ import Weather from './Components/Weather/Weather';
 import {React,useState,useEffect} from 'react';
 import axios from 'axios';
 import NewsList from './Components/NewsList/NewsList';
-import SearchBar from './Components/SearchBar/SearchBar';
+// import SearchBar from './Components/SearchBar/SearchBar';
 
 function App() {
 
@@ -33,7 +33,6 @@ function App() {
      
      <Header />
      <Weather />
-     <SearchBar newsList={newsList}/>
      <NewsList newsList={newsList}/> {/* Sending states to corresponding components */}
      <Footer />
 
