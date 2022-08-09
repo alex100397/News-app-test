@@ -4,10 +4,10 @@ This project was designed with the help of React.js, News API, OpenWeather API, 
 
 ##Functionalities
 
-[1] News is retreived from News API.
-[2] Weather is calculated with the help of your Geolocation(Latitude,Longitude) and OpenWeather API.
-[3] Search Bar is included for the user's to type the keywords.
-[4] News Data is published according to the date.
+1. News is retreived from News API.
+2. Weather is calculated with the help of your Geolocation(Latitude,Longitude) and OpenWeather API.
+3. Search Bar is included for the user's to type the keywords.
+4. News Data is published according to the date.
 
 ## Available Scripts
 
