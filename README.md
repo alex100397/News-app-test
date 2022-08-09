@@ -2,7 +2,7 @@
 
 This project was designed with the help of React.js, News API, OpenWeather API, Material UI.
 
-##Functionalities
+## Functionalities
 
 1. News is retreived from News API.
 2. Weather is calculated with the help of your Geolocation(Latitude,Longitude) and OpenWeather API.
