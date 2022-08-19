@@ -1,47 +1,38 @@
 import { Box, Container, TextField } from '@mui/material';
-import {React,useState} from 'react';
+import { React } from 'react';
 import NewsCard from '../NewsCard/NewsCard';
 import './NewsList.css';
+import { useSelector } from 'react-redux';
+import { getAllNews } from '../../Store/News/newsSlice';
 
-const NewsList = ({newsList}) => { //Destructuring props
-
-  const [search,setSearch] = useState('');
-  const [filter,setFilter] = useState([]);
-
-  const searchItems = (searchValue) => {
-    setSearch(searchValue);
-    if(search !== ''){
-        const filterData = newsList.filter((items)=>{
-            return Object.values(items).join('').toLowerCase().includes(search.toLowerCase())
-        })
-        setFilter(filterData)
-    }
-    else{
-        setFilter(newsList)
-    }
-}
+const NewsList = () => {
+  const newsAll = useSelector(getAllNews); //Extracting data from the Redux Store
+  let renderNews = '';
+  renderNews =
+    newsAll.status === 'ok' ? (
+      newsAll.articles.map((newsItem) => (
+        <NewsCard newsItem={newsItem} key={newsItem.title} />
+      ))
+    ) : (
+      <div>
+        {' '}
+        <h3>{newsAll.error}</h3>{' '}
+      </div>
+    );
 
   return (
-    <Container maxWidth="md">
-        <div className='search'>
-          <Box sx = {{width:500,maxWidth:'100%', }} >
-            <TextField fullWidth label="Search" onChange={(e)=> searchItems(e.target.value)}/>
-          </Box> 
-        </div>
-        <div className='news-list'>
-          {search.length > 1 ? (
-            filter.map((newsItem)=> ( 
-              <NewsCard newsItem={newsItem} key={newsItem.title}/> //Passing values to NewsCard component
-            ))
-            ) : (
-            newsList.map((newsItem) => (
-            <NewsCard newsItem={newsItem} key={newsItem.title}/> 
-            )) 
-            )         
-          }           
+    <Container maxWidth='md'>
+      <div className='search'>
+        {' '}
+        {/*Search Box*/}
+        <Box sx={{ width: 500, maxWidth: '100%' }}>
+          <TextField fullWidth label='Search' />
+        </Box>
       </div>
-    </Container>
-  )
-}
 
-export default NewsList
+      {<div className='news-list'>{renderNews}</div>}
+    </Container>
+  );
+};
+
+export default NewsList;
