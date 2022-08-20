@@ -1,11 +1,11 @@
-.App{
-    background-color: #f1f1f1;
+.App {
+  background-color: #f1f1f1;
 }
 
 a:link,
 a:hover,
 a:visited,
-a:active{
-    text-decoration: none;
-    color: inherit;
+a:active {
+  text-decoration: none;
+  color: inherit;
 }

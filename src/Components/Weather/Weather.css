@@ -1,17 +1,17 @@
-.weather-app{
-    width:100%;
-    height:auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:#f1f1f1;
+.weather-app {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
 }
 
-.weather-container{
-    display: flex;
-    flex-direction: row;
+.weather-container {
+  display: flex;
+  flex-direction: row;
 }
 
-h4{
-    padding:4px;
+h4 {
+  padding: 4px;
 }
