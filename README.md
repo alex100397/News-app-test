@@ -1,6 +1,6 @@
 # News App   
 
-This project was designed with the help of React.js, Material UI, News API, OpenWeather API and state management with the help of Redux Toolit.
+This project was designed with the help of React.js, Material UI, News API, OpenWeather API and state management with the help of Redux Toolkit.
 
 ## Functionalities
 
